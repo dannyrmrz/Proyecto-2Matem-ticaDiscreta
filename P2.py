@@ -60,9 +60,8 @@ def generar_llaves(rango_inferior, rango_superiores):
     return (e, n), (d, n) #Regresar las llaves pública y privada
 
 '''Cifra el mensaje con la llave pública
-1. Convertir cada caracter a su valor ASCII con la función ord()
-2. Elevar el valor ASCII a la potencia de e y n, 
-3. Guardar el valor cifrado de cada caracter en una lista'''
+1. Elevar cada caracter del mensaje a la potencia de e y n
+2. Guardar el valor cifrado en una lista'''
 def encriptar(mensaje, llave_publica): 
     mensaje_cifrado = []
     e, n = llave_publica #Desempaquetar la llave pública
@@ -71,9 +70,10 @@ def encriptar(mensaje, llave_publica):
     return mensaje_cifrado
 
 '''Descifra el mensaje con la llave privada
-1. Elevar cada valor cifrado a la potencia de d y n
-2. Convertir el valor a su caracter correspondiente con la función chr()
-3. Guardar el caracter descifrado en una lista'''
+1. Elevar cada caracter cifrado a la potencia de d y n
+2. Guardar el valor descifrado en una lista
+3. Unir los caracteres descifrados en un solo string'''
+
 def desencriptar(mensaje_cifrado, llave_privada):
     mensaje_descifrado = []
     d, n = llave_privada #Desempaquetar la llave privada
