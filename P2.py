@@ -38,7 +38,7 @@ def inverso_modular(e, n):
 
 '''
 Genera las llaves pública y privada
-1. Generar dos primos dentro de un rango especificado por el usuario
+1. Generar dos primos dentro de un rango especificado
 2. Calcular el producto de los dos primos
 3. Calcular el totiente de euler para asegurarse que los numeros sean coprimos de n
 4. Generar un número aleatorio para e, que sea coprimo con phi
